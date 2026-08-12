@@ -1,0 +1,23 @@
+{
+  "name": "practica-tasks-sanabria-leandro",
+  "version": "1.0.0",
+  "description": "CRUD de Tareas y Usuarios con Express y Sequelize",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch app.js",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1",
+    "morgan": "^1.11.0",
+    "mysql2": "^3.23.3",
+    "sequelize": "^6.37.8"
+  },
+  "devDependencies": {
+    "dotenv": "^17.4.2"
+  }
+}
