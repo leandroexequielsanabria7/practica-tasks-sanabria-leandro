@@ -1,13 +1,13 @@
 import { Sequelize } from 'sequelize';
+import { env } from './env.js';
 
-// Instancia de Sequelize con los datos de conexión escritos directo (hardcodeados)
-export const sequelize = new Sequelize('tasks_users_db', 'root', '', {
-    host: 'localhost',
-    dialect: 'mysql',
+// Ahora los valores vienen del .env a través de env.js (antes estaban hardcodeados)
+export const sequelize = new Sequelize(env.DB_NAME, env.DB_USER, env.DB_PASSWORD, {
+    host: env.DB_HOST,
+    dialect: env.DB_DIALECT,
     logging: false
 });
 
-// Prueba la conexión y crea las tablas automáticamente
 export const conectarDB = async () => {
     try {
         await sequelize.authenticate();

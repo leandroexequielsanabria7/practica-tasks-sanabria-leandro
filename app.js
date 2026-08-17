@@ -4,6 +4,7 @@ import morgan from 'morgan';
 
 // Importaciones internas
 import { conectarDB } from './src/config/database.js';
+import { env } from './src/config/env.js';
 import userRoutes from './src/routes/user.routes.js';
 import taskRoutes from './src/routes/task.routes.js';
 
@@ -12,7 +13,7 @@ conectarDB();
 
 // Inicialización de la app
 const app = express();
-const PORT = 3000;
+const PORT = env.PORT;
 
 // Middlewares
 app.use(express.json());   // permite leer JSON del body de las peticiones
